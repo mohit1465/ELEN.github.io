@@ -9,11 +9,25 @@
     <script>
         var User_Input;
 
-        alert("Welcome to ELEN's Website.");
-
         function main() {
             User_Input = document.getElementById("User_Input").value;
-            document.getElementById("output").innerText = User_Input;
+            var userMessage = document.createElement("div");
+            userMessage.className = "message user";
+            userMessage.innerText = User_Input;
+
+            var aiMessage = document.createElement("div");
+            aiMessage.className = "message ai";
+            aiMessage.innerText = "Result"; // Placeholder for AI response
+
+            var output = document.getElementById("output");
+            output.appendChild(userMessage);
+            output.appendChild(aiMessage);
+
+            // Clear the input box
+            document.getElementById("User_Input").value = "";
+            
+            // Scroll to the bottom of the output box
+            output.scrollTop = output.scrollHeight;
         }
     </script>
 </head>
@@ -21,7 +35,8 @@
     <div class="main">
         <h1>Hey, I am ELEN, your assistant!</h1>
     </div>
-    <div id="output" style="margin-top: 20px;"></div>
+    <div id="output" class="Output_Box">
+    </div>
     <div class="Input_Box">
         <input type="text" placeholder="Type your message here..." class="User_Input_Box" id="User_Input">
         <button type="button" class="Submit_Button" id="Submitted" onclick="main()">Send</button>
