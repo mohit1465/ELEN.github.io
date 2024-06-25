@@ -6,14 +6,25 @@
     <title>Chatbot UI</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script>
+        var User_Input;
+
+        alert("Welcome to ELEN's Website.");
+
+        function main() {
+            User_Input = document.getElementById("User_Input").value;
+            document.getElementById("output").innerText = User_Input;
+        }
+    </script>
 </head>
 <body>
     <div class="main">
         <h1>Hey, I am ELEN, your assistant!</h1>
     </div>
+    <div id="output" style="margin-top: 20px;"></div>
     <div class="Input_Box">
-        <input type="text" placeholder="Type your message here..." class="User_Input_Box">
-        <button type="submit" class="Submit_Button">Send</button>
+        <input type="text" placeholder="Type your message here..." class="User_Input_Box" id="User_Input">
+        <button type="button" class="Submit_Button" id="Submitted" onclick="main()">Send</button>
     </div>
 </body>
 </html>
