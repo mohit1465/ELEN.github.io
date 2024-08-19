@@ -178,7 +178,7 @@ async function processQRCodeData(qrData) {
     const repoOwner = 'Mohit1465';
     const repoName = 'ELEN.github.io';
     const filePath = 'data.js';
-    const token = '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';
+    const token = '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';
 
     const qrResult = document.getElementById('qr-result');
     const qrContent = document.getElementById('qr-content');
@@ -235,7 +235,7 @@ async function updateData(updatedData) {
     const repoOwner = 'Mohit1465';
     const repoName = 'ELEN.github.io';
     const filePath = 'data.js';
-    const token = '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';
+    const token = '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';
 
     try {
         // Get the current file's sha
